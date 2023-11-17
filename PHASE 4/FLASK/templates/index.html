@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://imageio.forbes.com/specials-images/imageserve/6440e37e940683175fbffcf0/best-airlines-in-2023/960x0.jpg?height=473&width=711&fit=bounds');
+            background-size: cover;
+            background-color: #f4f4f4;
+        }
+
+        .login {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        nav {
+            background-color: #00bcd4;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .fa-star {
+            color:black;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .checked {
+            color:green;
+}
+
+        form {
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        .btn-large {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 bg-light text-right">
+                <a href="/home" class="btn btn-info btn-lg">Home</a>
+                <a href="/predict" class="btn btn-primary disabled btn-lg">Predict</a>
+            </div>
+        </div>
+
+        <br>
+        <h1><strong>Airline Review Classification</strong></h1><br>
+        <h4>
+        <form action="/guest" method="post">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Sevices</a>
+                <a href="#">About</a>
+                <a href="#">Contact US</a>
+                <p style="color:red;font-weight: bolder;">Enjoy Your Flight Journeys</p>
+            </nav>
+                <label>Airline name :-</label>
+                <select name="Airline name" id="Airline name">
+                    <option value="AB Aviation">AB Aviation</option>
+                    <option value="Caribbean Airlines " selected>Caribbean Airlines</option>
+                    <option value="Bangkok Airways">Bangkok Airways</option>
+                    <option value="Philippine Airlines">Philippine Airlines</option>
+                    <option value="Germanwings">Germanwings</option>
+                    <option value="MEGA Maldives Airlines">MEGA Maldives Airlines</option>
+                  </select><br><br>
+                  <label>Verified :-</label>
+                  <select name="Verified" id="Verified">
+                    <option value="True" selected>True</option>
+                    <option value="False">False</option>
+                  </select><br><br>
+                  <label>Seat Type :-</label>
+                  <select name="Seat type" id="Seat type">
+                    <option value="Economy Class" selected>Economy Class</option>
+                    <option value="Business Class">Business Class</option>
+                    <option value="Premium Economy">Premium Economy</option>
+                    <option value="First Class " selected>First Class </option>
+                  </select><br><br>
+                  <label>Type Of Traveller :-</label>
+                  <select name="Type Of Traveller" id="Type Of Traveller">
+                    <option value="Solo Leisure" selected>Solo Leisure</option>
+                    <option value="Couple Leisure">Couple Leisure</option>
+                    <option value="Family Leisure">Family Leisure</option>
+                    <option value="Business" selected>Business</option>
+                  </select><br><br>
+                  <label>Month and Year :-</label>
+                  <input type="month"><br><br>
+                  <label>Overall Rating</label>
+                  <span class="checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <label>Seat Comfort</label>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <label>Ground_Service</label>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <label>Food_Beverages</label>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+        </form>
+        <br>
+        </h4>
+    </div>
+    {% if y %}
+    <h2>{{ y }}</h2>
+{% endif %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
